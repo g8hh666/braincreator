@@ -435,7 +435,7 @@ function updateAcc(delta){
   acceleratorToAdd = Math.min(acceleratorToAdd,2000) 
   if(acceleratorToAdd>0){
     accelerator+=acceleratorToAdd
-    divInfo("You slept for "+miliToText(totalTimeOutInit,undefined,true)+" and had nightmares so your brain generate "+acceleratorToAdd+" fear point"+(acceleratorToAdd>1 ? "s": "") +".")
+    divInfo("你睡了 "+miliToText(totalTimeOutInit,undefined,true)+" 并且做了噩梦，让你的大脑产生 "+acceleratorToAdd+" 恐惧点数"+(acceleratorToAdd>1 ? "": "") +".")
   }
   if(accMode && accelerator>0){
     accelerator-=0.002*delta;
@@ -524,7 +524,7 @@ function updateAscUps(){
             }
                 if(statusHere != "locked"){
                   a += "<h3 class='description'>"+ cnItem(ascencionsUps[i][0]) + roman +"<br>"
-                  a += "<span class='description2'>"+ ascencionsUps[i][1] +"</span></h3>"
+                  a += "<span class='description2'>"+ cnItem(ascencionsUps[i][1]) +"</span></h3>"
                   a += "<h3 class='price'>成本:"+ bigNumber( ascCost(i,u) )+" <i class='fas fa-biohazard'></i></h3>"
                 }
                 else
@@ -573,7 +573,7 @@ function stats(force){
     var chart = new CanvasJS.Chart("stats", {
       theme: "light2",
       title:{
-        text: "Neurons per level"
+        text: "每级神经元"
       },
       width:670,
       height:375,

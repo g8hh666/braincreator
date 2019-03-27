@@ -7,10 +7,11 @@
 <script src="//cnh5.gitee.io/game/js/jquery.min.js"></script>
    <script src="zh.js"></script>
     <script src="a/a.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.7.2/css/all.min.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="mousewheel.js"></script>
     <script src="canvasjs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.1/dist/tf.min.js"></script>
+    <script src="https://cdn.bootcss.com/tensorflow/0.14.1/tf.min.js"></script>
+<!--
     <script src="https://cdn1.kongregate.com/javascripts/kongregate_api.js"></script>
     <script>
     kongregateAPI.loadAPI(function(){
@@ -22,6 +23,7 @@
           });
         });
     </script>
+-->
 <title>大脑创造者 - Brain Creator</title>
   </head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -62,29 +64,29 @@
             style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
        </div>
         <div id="load-page" class="div-info-2">
-          <h3 style="text-align:center">Rearranging brain</h3>
-          <h6>Fact to keep your brain entertained while game is loading:</h6>
+          <h3 style="text-align:center">重新排列大脑</h3>
+          <h6>事实是在游戏加载时保持你的大脑娱乐:</h6>
           <h5 id="fact"></h5>
-          <h4 id="click-somewhere">Click anywhere to close this box</h4>
+          <h4 id="click-somewhere">点击任意地方关闭弹框</h4>
         </div>
         <div id="customize-div" class="div-info-2">
             <div class="close"><i class="fa fa-times"></i></div>
-            <h3 class="title">Customizer</h3>
+            <h3 class="title">定制</h3>
             <table id="customize-table">
                 <tr>
-                  <td><h3>Background brightness</h3></td>
+                  <td><h3>背景亮度</h3></td>
                 </tr>
                 <tr>
                   <td><input min=0 max=100 value=100 type="range" name="" id="darkness"></td>
                 </tr>
                 <tr>
-                  <td><h3>Brain opacity</h3></td>
+                  <td><h3>大脑透明度</h3></td>
                 </tr>
                 <tr>
                   <td><input min=0 max=100 value=30 type="range" name="" id="brain-darkness"></td>
                 </tr>
                 <tr>
-                  <td><h3>Mark main neuron</h3></td>
+                  <td><h3>标记主神经元</h3></td>
                 </tr>
                 <tr>
                   <td>
@@ -95,7 +97,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><h3>Brain color</h3></td>
+                  <td><h3>大脑颜色</h3></td>
                 </tr>
                 <tr>
                   <td>
@@ -106,38 +108,38 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><h3>Initial effect color</h3></td>
+                  <td><h3>初始效果颜色</h3></td>
                 </tr>
                 <tr>
                   <td><input min=0 max=360 value=340 step=2 type="range" name="" id="brain-hue"></td>
                 </tr>
             </table>
-              <button id="reset-custom"style="width:100%;margin-top:10px;"class="btn1">Reset settings</button>  
+              <button id="reset-custom"style="width:100%;margin-top:10px;"class="btn1">重置设置</button>  
             
         </div>
        	<div id="stats-div" class="div-info-2">
         	<div id="stats">
           </div>
           <div class="close"><i class="fa fa-times"></i></div>
-          <h3 class="title">Statistics</h3>
+          <h3 class="title">统计</h3>
           <table>
             <tr>
-              <td><h5>Number of neurons</h5></td>
+              <td><h5>神经元数量</h5></td>
               <td><h5 id="neurons-num">100</h5></td>
             </tr>
             <tr>
-                <td><h5>Average neuron level</h5></td>
+                <td><h5>平均神经元等级</h5></td>
                 <td><h5 id="average-neuron-lvl">100</h5></td>
             </tr>
             </table>
-          <button class="btn1 rearrange">Rearrange brain</button>
+          <button class="btn1 rearrange">重新排列大脑</button>
         </div>
-      <div class="div-info"><h3></h3><h4>Click anywhere to close this box</h4></div>
+      <div class="div-info"><h3></h3><h4>点击任意地方关闭弹框</h4></div>
       <div class="div-info-2" id="infoDiv"><h3 id="msg"></h3></div>
-      <div class="confirmation"><h3>Are you sure of something?</h3>
+      <div class="confirmation"><h3>你确定吗？</h3>
         <div class="buttonDiv">
-          <button class="true btn1">Yes</button>
-          <button class="false btn2">No</button>
+          <button class="true btn1">确定</button>
+          <button class="false btn2">取消</button>
         </div>
       </div>
       <div id="back-layer"></div>
@@ -147,7 +149,7 @@
         </div>
         <h5 id="lastNeuronNeed">0</h5>
         <h5 id="neuronNeed"></h5>
-        <h5 id="atualDnah5"><span id="atualDna"></span> <i class="fas fa-dna"> <i style="position: relative;" class="fa fa-info-circle info-text-div" info-text="DNA needed to reach next brain level"></i></i></h5>
+        <h5 id="atualDnah5"><span id="atualDna"></span> <i class="fas fa-dna"> <i style="position: relative;" class="fa fa-info-circle info-text-div" info-text="DNA需要达到下一个大脑等级"></i></i></h5>
       </div>
       <div id="achievs" class="div-info-2">
         <div class="close"><i class="fa fa-times"></i></div>
@@ -198,7 +200,7 @@
         <div id="upgrades" class="bottomMenu active">
 
           <div class="upgrade-box" n="1">
-            <h2>大脑强度<i class="fa fa-info-circle info-text-div" info-text="+DNA per neuron activated"></i>
+            <h2>大脑强度<i class="fa fa-info-circle info-text-div" info-text="+DNA 每个神经元激活"></i>
               </h2>
             <h4><span class='value'></span><span class='nextvalue'></span> <i class="fas fa-dna"></i>/神经元已激活</h4>
             <h3 class="cost">成本: <span class="costspan">5</span> <i class="fas fa-dna"></i></h3>
@@ -207,7 +209,7 @@
             <div class="bar"></div>
           </div>
           <div class="upgrade-box" n="2">
-            <h2>脉冲速度<i class="fa fa-info-circle info-text-div" info-text="The speed of the pulses"></i>
+            <h2>脉冲速度<i class="fa fa-info-circle info-text-div" info-text="脉冲的速度"></i>
             </h2>
             <h4><span class='value'></span><span class='nextvalue'></span> µ/秒</h4>
             <h3 class="cost">成本: <span class="costspan">5</span> <i class="fas fa-dna"></i></h3>
@@ -216,7 +218,7 @@
             <div class="bar"></div>
           </div>
           <div class="upgrade-box" n="3">
-            <h2>最大脉冲<i class="fa fa-info-circle info-text-div" info-text="Maximum pulses actives at same time"></i>
+            <h2>最大脉冲<i class="fa fa-info-circle info-text-div" info-text="同时激活的最大脉冲数"></i>
             </h2>
             <h4><span class='value'></span><span class='nextvalue'></span> 在同一时间最大脉冲数量</h4>
             <h3 class="cost">成本: <span class="costspan">5</span> <i class="fas fa-dna"></i></h3>
@@ -225,7 +227,7 @@
             <div class="bar"></div>
           </div>
           <div class="upgrade-box" n="4">
-            <h2>大脑刺激<i class="fa fa-info-circle info-text-div" info-text="Time to pulse automatically"></i>
+            <h2>大脑刺激<i class="fa fa-info-circle info-text-div" info-text="时间到后自动脉冲"></i>
               <input type="checkbox" id="autopulse" checked></h2>
             <h4>刺激每 <span class='value'></span><span class='nextvalue'></span></h4>
             <h3 class="cost">成本: <span class="costspan"></span> <i class="fas fa-dna"></i></h3>
@@ -235,7 +237,7 @@
             <div class="bar"></div>
           </div>
           <div class="upgrade-box" n="5">
-              <h2>强度损失<i class="fa fa-info-circle info-text-div" info-text="+DNA in neuron = brainStrength * StrengthLoss&lt;sup&gt;(neuron level)&lt;/sup&gt;"></i></h2>
+              <h2>强度损失<i class="fa fa-info-circle info-text-div" info-text="+神经元中的DNA = 大脑强度 * 强度损失&lt;sup&gt;(神经元等级)&lt;/sup&gt;"></i></h2>
               <h4><span class='value'></span>%<span class='nextvalue'></span> 每神经元损失</h4>
               <h3 class="cost">成本: <span class="costspan">10</span> <i class="fas fa-dna"></i></h3>
               <h3 upgrade="4" class="upgrade">升级</h3>
@@ -266,7 +268,7 @@
                   <td><span id="radiationTable1"></span><span class="main-color" id="radiationTable2"></span></td>
                 </tr>
                 <tr>
-                  <td>强度加成<i class="fa fa-info-circle info-text-div" info-text="Multiply base brain strength and base pulse speed"></i>
+                  <td>强度加成<i class="fa fa-info-circle info-text-div" info-text="乘以基础大脑强度和基础脉冲速度"></i>
                   </td>
                   <td><span id="radiationTable3"></span><span class="main-color" id="radiationTable4"></span></td>
                 </tr>
@@ -324,18 +326,18 @@
             </table>
               </h3>
 
-                  <h4 style="margin-bottom:0;">This is your game save data. Copy it and store at some safe place</h4>
-                  <h6 style="margin-top:0;font-size:8.8px;">(If you clear your browser's cache, your data will be deleted.)</h6>
+                  <h4 style="margin-bottom:0;">这是您的游戏存档数据。 将其复制并存放在安全的地方</h4>
+                  <h6 style="margin-top:0;font-size:8.8px;">(如果清除浏览器的缓存，则会删除您的数据。)</h6>
                   <textarea style="margin: 0 0 10px 0;transition: 0s;resize: none;" name="" id="loadtext" cols="40" rows="3"> </textarea>
                   <br>
-                  <button class="btn1" onclick="copyToClipboard()">Copy</button>
-                  <button class="btn1" onclick="applyCode()">Load</button>
+                  <button class="btn1" onclick="copyToClipboard()">复制</button>
+                  <button class="btn1" onclick="applyCode()">加载</button>
                   <button class="btn1" onclick="saveTextAsFile()"><i class="fa fa-download"></i></button>
-                  <div style="margin: 10px auto 20px auto"onclick="confirmationBox('Do you really want to reset all your progress?','reset()')" id="ascendButton">
-                    Hard reset
+                  <div style="margin: 10px auto 20px auto"onclick="confirmationBox('你真的想重置所有进度吗？','reset()')" id="ascendButton">
+                    硬复位
                   </div>
-                  <h2 style="margin: 8px 0">Extras</h2>
-                  <h4 style="margin: 0 0 8px 0;">To contribute for<br>more games like this</h4>
+                  <h2 style="margin: 8px 0">附加功能</h2>
+                  <h4 style="margin: 0 0 8px 0;">赞助我们做出<br>更多这样的游戏</h4>
                   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="P92ZTMEXXNRTC">
@@ -344,7 +346,7 @@
                   </form>
                   
                   <a href="https://www.kongregate.com/games/joao8991/computer-evolution" target="_blank">
-                    <h4 style="margin: 4px 0 6px 0"><i class="fa fa-laptop"></i> Computer evolution</h4>
+                    <h4 style="margin: 4px 0 6px 0"><i class="fa fa-laptop"></i> 计算机进化</h4>
                   </a>
                     <!--<a target="_blank"href="https://www.patreon.com/bePatron?u=5750460" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
                     -->
