@@ -56,87 +56,87 @@ var adds = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var achievements = [
   //[nome,explicacao,eval para teste,eval perc bar,explicacao reward,eval reward,status]
   //"nivel1"
-  ["Baby clicker","fa fa-baby","50 次点击 ","clicks>=50","clicks/50","1.05x brain strength","mults[0] = 1.05"],
-  ["Rotifer brain","fa fa-circle","20 神经元","brain.size>=20","brain.size/20","10+ max pulses","adds[0] = 10"],
+  ["Baby clicker","fa fa-baby","50 次点击 ","clicks>=50","clicks/50","1.05x 大脑强度","mults[0] = 1.05"],
+  ["Rotifer brain","fa fa-circle","20 神经元","brain.size>=20","brain.size/20","10+ 最大脉冲","adds[0] = 10"],
   ["Miescher discovery",
-  "fas fa-dna","1000 <i class='fas fa-dna'></i> 总计","dnatotal>=1000","dnatotal/1000","5+ max pulses","adds[2] = 5"],
+  "fas fa-dna","1000 <i class='fas fa-dna'></i> 总计","dnatotal>=1000","dnatotal/1000","5+ 最大脉冲","adds[2] = 5"],
   //"nivel2"
-  ["Kid clicker","fa fa-child","200 次点击 ","clicks>=200","clicks/200","1.05x pulse speed","mults[1] = 1.05"],
-  ["Worm brain","fa fa-signature","50 神经元","brain.size>=50","brain.size/50","1.05x strength multiplier","mults[2] = 1.05"],
+  ["Kid clicker","fa fa-child","200 次点击 ","clicks>=200","clicks/200","1.05x 脉冲速度","mults[1] = 1.05"],
+  ["Worm brain","fa fa-signature","50 神经元","brain.size>=50","brain.size/50","1.05x 强度倍数","mults[2] = 1.05"],
   ["F.Griffith discovery",
-  "fas fa-dna","7500 <i class='fas fa-dna'></i> 总计","dnatotal>=7500","dnatotal/7500","5+ max pulses","adds[2] = 10"],
+  "fas fa-dna","7500 <i class='fas fa-dna'></i> 总计","dnatotal>=7500","dnatotal/7500","5+ 最大脉冲","adds[2] = 10"],
   //"nivel3"
   ["Teen clicker","fa fa-grin-tongue-wink","500 次点击 ","clicks>=500","clicks/500","Strength loss reduce by 10%","mults[3] = 1.10"],
   ["Fish brain","fa fa-fish","100 神经元","brain.size>=100","brain.size/100","Upgrade cost reduce by 5%","mults[4] = 0.95"],
   ["T.H.Morgan experiments",
-  "fas fa-dna","85k <i class='fas fa-dna'></i> 总计","dnatotal>=85000","dnatotal/85000","10+ max pulses","adds[2] = 20"],
+  "fas fa-dna","85k <i class='fas fa-dna'></i> 总计","dnatotal>=85000","dnatotal/85000","10+ 最大脉冲","adds[2] = 20"],
   //extra
   ["Picasso gift","fas fa-tint","125 神经元","brain.size>=125","brain.size/125","Customize environment","customizable = true"],
   //"nivel4"
-  ["Student clicker","fa fa-graduation-cap","1k 次点击 ","clicks>=1000","clicks/1000","1.10x pulse speed","mults[5] = 1.10"],
+  ["Student clicker","fa fa-graduation-cap","1k 次点击 ","clicks>=1000","clicks/1000","1.10x 脉冲速度","mults[5] = 1.10"],
   ["Kiwi brain","fas fa-kiwi-bird","200 神经元","brain.size>=200","brain.size/200","Upgrade cost reduce by 5%","mults[4]=(0.95*0.95)"],
   ["O.Avery discovery",
-  "fas fa-dna","500k <i class='fas fa-dna'></i> 总计","dnatotal>=500000","dnatotal/500000","10+ max pulses","adds[2] = 30"],
+  "fas fa-dna","500k <i class='fas fa-dna'></i> 总计","dnatotal>=500000","dnatotal/500000","10+ 最大脉冲","adds[2] = 30"],
   //"nivel5"
-  ["Graduated clicker","fa fa-user-graduate","1.8k 次点击 ","clicks>=1800","clicks/1800","15+ max pulses","adds[1]=15"],
-  ["Ghost brain","fa fa-ghost","300 神经元","brain.size>=300","brain.size/300","15+ max pulses","adds[2]=45"],
+  ["Graduated clicker","fa fa-user-graduate","1.8k 次点击 ","clicks>=1800","clicks/1800","15+ 最大脉冲","adds[1]=15"],
+  ["Ghost brain","fa fa-ghost","300 神经元","brain.size>=300","brain.size/300","15+ 最大脉冲","adds[2]=45"],
   ["J.Watson experiments",
-  "fas fa-dna","5M <i class='fas fa-dna'></i> 总计","dnatotal>=5000000","dnatotal/5000000","1.05x brain strength","mults[6] = 1.05"],
+  "fas fa-dna","5M <i class='fas fa-dna'></i> 总计","dnatotal>=5000000","dnatotal/5000000","1.05x 大脑强度","mults[6] = 1.05"],
   //"nivel6"
-  ["Pro clicker","fa fa-crosshairs","3k 次点击 ","clicks>=3000","clicks/3000","1.10x pulse speed","mults[5] = (1.10*1.10)"],
-  ["Frog brain","fa fa-frog","450 神经元","brain.size>=450","brain.size/450","1.05x strength multiplier","mults[2]=(1.05*1.05)"],
+  ["Pro clicker","fa fa-crosshairs","3k 次点击 ","clicks>=3000","clicks/3000","1.10x 脉冲速度","mults[5] = (1.10*1.10)"],
+  ["Frog brain","fa fa-frog","450 神经元","brain.size>=450","brain.size/450","1.05x 强度倍数","mults[2]=(1.05*1.05)"],
   ["F.Crick experiments","fas fa-dna",bigNumber(3e7)+" <i class='fas fa-dna'></i> 总计","dnatotal>=3e7","dnatotal/3e7",
-  "1.05x strength multiplier","mults[11] = 1.05"],
+  "1.05x 强度倍数","mults[11] = 1.05"],
   //"nivel7"
   ["NASA clicker","fa fa-user-astronaut","5k 次点击 ","clicks>=5000","clicks/5000","Upgrade cost reduce by 5%","mults[7]=0.95"],
-  ["Devil's brain","fa fa-angry","666 神经元","brain.size>=666","brain.size/666","1.0666x brain strength","mults[8]=1.0666"],
+  ["Devil's brain","fa fa-angry","666 神经元","brain.size>=666","brain.size/666","1.0666x 大脑强度","mults[8]=1.0666"],
   ["Delbrück experiments","fas fa-dna",bigNumber(1e8)+" <i class='fas fa-dna'></i> 总计","dnatotal>=1e8","dnatotal/1e8",
-  "1.10x pulse speed","mults[14] = 1.10"],
+  "1.10x 脉冲速度","mults[14] = 1.10"],
   //"nivel8"
-  ["Mouse Breaker","fa fa-house-damage","7.5k 次点击 ","clicks>=7500","clicks/7500","15+ max pulses","adds[1]=30"],
-  ["Dog brain","fa fa-dog","900 神经元","brain.size>=900","brain.size/900","1.10x pulse speed","mults[9]=1.1"],
+  ["Mouse Breaker","fa fa-house-damage","7.5k 次点击 ","clicks>=7500","clicks/7500","15+ 最大脉冲","adds[1]=30"],
+  ["Dog brain","fa fa-dog","900 神经元","brain.size>=900","brain.size/900","1.10x 脉冲速度","mults[9]=1.1"],
   ["S.Luria experiments","fas fa-dna",bigNumber(1e9)+" <i class='fas fa-dna'></i> 总计","dnatotal>=1e9","dnatotal/1e9",
   "Upgrade cost reduce by 5%","mults[13] = 0.95"],
   //"nivel9"
-  ["Super clicker","fa fa-running","11k 次点击 ","clicks>=11000","clicks/11000","1.05x strength multiplier","mults[12]=1.05"],
-  ["Crow brain","fa fa-crow","1200 神经元","brain.size>=1200","brain.size/1200","1.05x brain strength","mults[8]=(1.05*1.0666)"],
+  ["Super clicker","fa fa-running","11k 次点击 ","clicks>=11000","clicks/11000","1.05x 强度倍数","mults[12]=1.05"],
+  ["Crow brain","fa fa-crow","1200 神经元","brain.size>=1200","brain.size/1200","1.05x 大脑强度","mults[8]=(1.05*1.0666)"],
   ["Chargaff experiments","fas fa-dna",bigNumber(9e9)+" <i class='fas fa-dna'></i> 总计","dnatotal>=9e9","dnatotal/9e9",
-  "1.05x strength multiplier","mults[11] = (1.05*1.05)"],
+  "1.05x 强度倍数","mults[11] = (1.05*1.05)"],
   //"nivel10"
-  ["Ninja clicker","fa fa-ninja","15k 次点击 ","clicks>=15000","clicks/15000","1.10x pulse speed","mults[5] = (1.10*1.10*1.10)"],
-  ["Gorilla brain","fa fa-paw","1650 神经元","brain.size>=1650","brain.size/1650","25+ max pulses","adds[2]=70"],
+  ["Ninja clicker","fa fa-ninja","15k 次点击 ","clicks>=15000","clicks/15000","1.10x 脉冲速度","mults[5] = (1.10*1.10*1.10)"],
+  ["Gorilla brain","fa fa-paw","1650 神经元","brain.size>=1650","brain.size/1650","25+ 最大脉冲","adds[2]=70"],
   ["M.Wilkins experiments","fas fa-dna",bigNumber(6e10)+" <i class='fas fa-dna'></i> 总计","dnatotal>=6e10","dnatotal/6e10",
-  "1.05x brain strength","mults[6] = (1.05*1.05)"],
+  "1.05x 大脑强度","mults[6] = (1.05*1.05)"],
   //"nivel11"
-  ["Jedi clicker","fa fa-jedi","20k 次点击 ","clicks>=20000","clicks/20000","1.05x brain strength","mults[12]=1.05"],
+  ["Jedi clicker","fa fa-jedi","20k 次点击 ","clicks>=20000","clicks/20000","1.05x 大脑强度","mults[12]=1.05"],
   ["Human brain","fa fa-grin","2000 神经元","brain.size>=2000","brain.size/2000","Upgrade cost reduce by 5%","mults[4]=(0.95*0.95*0.95)"],
   ["M.McCarty experiments","fas fa-dna",bigNumber(3e11)+" <i class='fas fa-dna'></i> 总计","dnatotal>=3e11","dnatotal/3e11",
   "Upgrade cost reduce by 5%","mults[13] = (0.95*0.95)"],
   //"nivel12"
-  ["Ultimate clicker","fa fa-trophy","25k 次点击 ","clicks>=25000","clicks/25000","25+ max pulses","adds[1]=50"],
+  ["Ultimate clicker","fa fa-trophy","25k 次点击 ","clicks>=25000","clicks/25000","25+ 最大脉冲","adds[1]=50"],
   ["Einstein brain","fa fa-grin-tongue-squint","2400 神经元","brain.size>=2400","brain.size/2400","Strength loss reduce by 20%","mults[10]=1.2"],
   ["C.MacLeod experiments","fas fa-dna",bigNumber(1e12)+" <i class='fas fa-dna'></i> 总计","dnatotal>=1e12","dnatotal/1e12",
-  "1.10x pulse speed","mults[14] = (1.10*1.10)"],
+  "1.10x 脉冲速度","mults[14] = (1.10*1.10)"],
   //"nivel13"
-  ["Da Vinci brain","fa fa-universal-access","3000 神经元","brain.size>=3000","brain.size/3000","1.05x strength multiplier","mults[2]=(1.05*1.05*1.05)"],
+  ["Da Vinci brain","fa fa-universal-access","3000 神经元","brain.size>=3000","brain.size/3000","1.05x 强度倍数","mults[2]=(1.05*1.05*1.05)"],
   ["A.Hershey experiments","fas fa-dna",bigNumber(8e12)+" <i class='fas fa-dna'></i> 总计","dnatotal>=8e12","dnatotal/8e12",
-  "1.05x strength multiplier","mults[11] = (1.05*1.05*1.05)"],
+  "1.05x 强度倍数","mults[11] = (1.05*1.05*1.05)"],
   //"nivel14"
-  ["Alien brain","fa fa-hand-spock","3250 神经元","brain.size>=3250","brain.size/3250","1.05x brain strength","mults[8]=(1.05*1.0666*1.05)"],
+  ["Alien brain","fa fa-hand-spock","3250 神经元","brain.size>=3250","brain.size/3250","1.05x 大脑强度","mults[8]=(1.05*1.0666*1.05)"],
   ["M.Chace experiments","fas fa-dna",bigNumber(5e13)+" <i class='fas fa-dna'></i> 总计","dnatotal>=5e13","dnatotal/5e13",
-  "1.05x brain strength","mults[6] = (1.05*1.05*1.05)"],
+  "1.05x 大脑强度","mults[6] = (1.05*1.05*1.05)"],
   //"nivel17"
-  ["Turing machine","fa fa-server","4000 神经元","brain.size>=4000","brain.size/4000","50+ max pulses","adds[2]=125"],
+  ["Turing machine","fa fa-server","4000 神经元","brain.size>=4000","brain.size/4000","50+ 最大脉冲","adds[2]=125"],
   ["H.Khorana experiments","fas fa-dna",bigNumber(3e14)+" <i class='fas fa-dna'></i> 总计","dnatotal>=3e14","dnatotal/3e14",
   "Upgrade cost reduce by 10%","mults[13] = (0.95*0.95*0.9)"],
   //"nivel15"
-  ["Computer","fa fa-laptop","5250 神经元","brain.size>=5250","brain.size/5250","1.10x pulse speed","mults[9]=(1.1*1.1)"],
+  ["Computer","fa fa-laptop","5250 神经元","brain.size>=5250","brain.size/5250","1.10x 脉冲速度","mults[9]=(1.1*1.1)"],
   ["R.Holley experiments","fas fa-dna",bigNumber(1e15)+" <i class='fas fa-dna'></i> 总计","dnatotal>=1e15","dnatotal/1e15",
-  "1.10x brain strength","mults[6] = (1.05*1.05*1.05*1.10)"],
+  "1.10x 大脑强度","mults[6] = (1.05*1.05*1.05*1.10)"],
   //"nivel16"
-  ["AI neural network","fa fa-code-branch","6500 神经元","brain.size>=6500","brain.size/6500","1.10x strength multiplier","mults[2]=(1.05*1.05*1.05*1.1)"],
+  ["AI neural network","fa fa-code-branch","6500 神经元","brain.size>=6500","brain.size/6500","1.10x 强度倍数","mults[2]=(1.05*1.05*1.05*1.1)"],
   ["M.Nirenberg experiments","fas fa-dna",bigNumber(5e15)+" <i class='fas fa-dna'></i> 总计","dnatotal>=5e15","dnatotal/5e15",
-  "1.10x strength multiplier","mults[11] = (1.05*1.05*1.05*1.10)"]
+  "1.10x 强度倍数","mults[11] = (1.05*1.05*1.05*1.10)"]
   //"nivel17"
 ];
 
@@ -449,7 +449,7 @@ function lowPriorityUpdate(){
     if(nextRadiation>0){
       $("#alert").css("display","block");
       $("#ascendButton").attr("class","");
-      $("#ascendButton").attr("onclick","confirmationBox('Ascend will restart your upgrades but you will receive <i class=\"fas fa-biohazard\"></i><br>Do you really want to ascend?','ascend()')");
+      $("#ascendButton").attr("onclick","confirmationBox('转生将重置您的升级，但您将得到 <i class=\"fas fa-biohazard\"></i><br>是否确定转生?','ascend()')");
       $("#radiationTable2").text(" (+"+(bigNumber(nextRadiation))+")");
       $("#radiationTable4").text(" ("+ strengthMult(radiation+nextRadiation).toFixed(2)+"x)");
     }

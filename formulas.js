@@ -483,10 +483,10 @@ function toRoman(num) {
 
 var ascencionsUps = [
   //["name","upgrade",qtd,initialprice,exponencialGrow,baseValue]
-  ["Math skills","1.20x upgrades",10,100,5,1.2],
+  ["Math skills","1.20x 升级效果",10,100,5,1.2],
   ["Mutation rate","upgrade costs reduce by 25%",5,100,5,0.75],
   ["Neuron proximity","Neurons distance reduce by 5%",3,500,25],
-  ["Cell grow","+1 neuron per level",1,25000,10]
+  ["Cell grow","+1 神经元 每级",1,25000,10]
 ]
 //[descpt,descpt2,]
 var ascStatus = [1,1,1,1];
