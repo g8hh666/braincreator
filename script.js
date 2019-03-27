@@ -385,7 +385,7 @@ function criaAchiv(){
     if(achsSave[i])
       active = " active"
 
-    var title = "<h2>"+achievements[i][0]+(active == "" ? "":" (Unlocked)")+"</h2>"
+    var title = "<h2>"+cnItem(achievements[i][0])+(active == "" ? "":" (已解锁)")+"</h2>"
     var goal = "<h3>"+achievements[i][2]+"</h3>"
     var rew = "<h3>"+achievements[i][5]+"</h3>"
     var icon = "<i class='"+achievements[i][1]+" icon'></i>"
@@ -402,26 +402,26 @@ function testAchiv(){
       achsSave[i]=true;
       eval(achievements[i][6])
       $("#achievement-oncontent div i").attr("class",achievements[i][1]);
-      $("#achievement-oncontent h2").html(achievements[i][0]);
-      $("#achievement-oncontent h5").html("Reward: "+achievements[i][5]);
+      $("#achievement-oncontent h2").html(cnItem(achievements[i][0]));
+      $("#achievement-oncontent h5").html("奖励: "+achievements[i][5]);
       $("#achievement-oncontent").css("display","block");
     }
     else if(achsSave[i]){
       eval(achievements[i][6])
       $("#achievement"+i).addClass("active");
-      $("#achievement"+i+" h2").text(achievements[i][0] + " (Unlocked)")
+      $("#achievement"+i+" h2").text(cnItem(achievements[i][0]) + " (已解锁)")
       $("#achievement"+i+" .bar-achiev").css("display","none");
     }
     else{
       var val = eval(achievements[i][4])*100
       if(val<100){
         $("#achievement"+i).removeClass("active");
-        $("#achievement"+i+" h2").text(achievements[i][0])
+        $("#achievement"+i+" h2").text(cnItem(achievements[i][0]))
         $("#achievement"+i+" .bar-achiev").css("width",val+"%");
       }
       else{
         $("#achievement"+i).addClass("active");
-        $("#achievement"+i+" h2").text(achievements[i][0] + " (Unlocked)")
+        $("#achievement"+i+" h2").text(cnItem(achievements[i][0]) + " (已解锁)")
         $("#achievement"+i+" .bar-achiev").css("display","none");
       }
     }

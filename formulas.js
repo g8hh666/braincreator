@@ -523,9 +523,9 @@ function updateAscUps(){
               roman = " " + toRoman(u)
             }
                 if(statusHere != "locked"){
-                  a += "<h3 class='description'>"+ ascencionsUps[i][0] + roman +"<br>"
+                  a += "<h3 class='description'>"+ cnItem(ascencionsUps[i][0]) + roman +"<br>"
                   a += "<span class='description2'>"+ ascencionsUps[i][1] +"</span></h3>"
-                  a += "<h3 class='price'>Cost:"+ bigNumber( ascCost(i,u) )+" <i class='fas fa-biohazard'></i></h3>"
+                  a += "<h3 class='price'>成本:"+ bigNumber( ascCost(i,u) )+" <i class='fas fa-biohazard'></i></h3>"
                 }
                 else
                   a += "<h2 class='locked-text'>未解锁</h2></div>"
